@@ -1,6 +1,6 @@
 # CervezaApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.2.
+App para buscar información acerca de tu cerveza favorita mas vendidas en El Salvador
 
 ## Development server
 

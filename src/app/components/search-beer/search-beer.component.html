@@ -1,0 +1,33 @@
+
+<div class="alert alert-danger mt-5 animated fadeIn fast" role="alert" *ngIf="beers.length == 0">
+  A simple danger alert—check it out!
+</div>
+
+<div class="card mb-3 mx-auto animated fadeIn fast " style="max-width: 800px;">
+    <div class="row g-5 " *ngFor="let beer of beers">
+      <div class="col-md-5 ">
+        <img [src]="beer.img" [alt]="beer.nombre"  >
+        
+      </div>
+      <div class="col-md-7">
+        <div class="card-body">
+          <h1 class="card-title">{{beer.nombre | uppercase}}</h1>
+          <hr>
+          <p class="card-text">{{beer.bio}}</p>
+          <p class="card-text"><small class="text-muted">Alcohol: {{beer.alcohol}}</small></p>
+          <p class="card-text"><small class="text-muted">Año: {{beer.year}}</small></p>
+          <p class="card-text"><small class="text-muted">Origen: {{beer.origen}}</small></p>
+          <img src="../../../assets/img/ESA.png" class="img-origen" *ngIf="beer.origen == 'El Salvador'">
+          <img src="../../../assets/img/mex.jpg" class="img-origen" *ngIf="beer.origen == 'México'">
+          <img src="../../../assets/img/belgica.png" class="img-origen" *ngIf="beer.origen == 'Bélgica'">
+          <img src="../../../assets/img/USA.png" class="img-origen" *ngIf="beer.origen == 'Estados Unidos'">
+          <img src="../../../assets/img/nica.gif" class="img-origen" *ngIf="beer.origen == 'Nicaragua'">
+          <div class="d-grid gap-2">
+            <button class="btn btn-danger mt-5" type="button" [routerLink]="['/beers']">Regresar</button>
+        </div>
+        </div>
+        
+    </div>
+  
+    </div>
+  </div>
